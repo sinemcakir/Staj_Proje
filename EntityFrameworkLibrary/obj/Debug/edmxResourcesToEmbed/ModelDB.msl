@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OrnekDBModelStoreContainer" CdmEntityContainer="OrnekDBEntities1">
+    <FunctionImportMapping FunctionImportName="Proc_Kategoriler_Islem" FunctionName="OrnekDBModel.Store.Proc_Kategoriler_Islem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OrnekDBModel.Proc_Kategoriler_Islem_Result">
+          <ScalarProperty Name="kategoriID" ColumnName="kategoriID" />
+          <ScalarProperty Name="UstKategoriID" ColumnName="UstKategoriID" />
+          <ScalarProperty Name="kategoriBaslik" ColumnName="kategoriBaslik" />
+          <ScalarProperty Name="kategoriAciklama" ColumnName="kategoriAciklama" />
+          <ScalarProperty Name="kategoriResimUrl" ColumnName="kategoriResimUrl" />
+          <ScalarProperty Name="kategoriOlTarih" ColumnName="kategoriOlTarih" />
+          <ScalarProperty Name="kategoriGunTarih" ColumnName="kategoriGunTarih" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proc_Markalar_Islem" FunctionName="OrnekDBModel.Store.Proc_Markalar_Islem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OrnekDBModel.Proc_Markalar_Islem_Result">
+          <ScalarProperty Name="markaID" ColumnName="markaID" />
+          <ScalarProperty Name="urunID" ColumnName="urunID" />
+          <ScalarProperty Name="markaKodu" ColumnName="markaKodu" />
+          <ScalarProperty Name="markaBaslik" ColumnName="markaBaslik" />
+          <ScalarProperty Name="markaAciklama" ColumnName="markaAciklama" />
+          <ScalarProperty Name="markaResimUrl" ColumnName="markaResimUrl" />
+          <ScalarProperty Name="markaOlTarih" ColumnName="markaOlTarih" />
+          <ScalarProperty Name="markaGunTarih" ColumnName="markaGunTarih" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proc_Urunler_Islem" FunctionName="OrnekDBModel.Store.Proc_Urunler_Islem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OrnekDBModel.Proc_Urunler_Islem_Result">
+          <ScalarProperty Name="urunID" ColumnName="urunID" />
+          <ScalarProperty Name="urunKodu" ColumnName="urunKodu" />
+          <ScalarProperty Name="urunBaslik" ColumnName="urunBaslik" />
+          <ScalarProperty Name="urunAciklama" ColumnName="urunAciklama" />
+          <ScalarProperty Name="urunResimUrl" ColumnName="urunResimUrl" />
+          <ScalarProperty Name="urunOlTarih" ColumnName="urunOlTarih" />
+          <ScalarProperty Name="urunGunTarih" ColumnName="urunGunTarih" />
+          <ScalarProperty Name="kategoriID" ColumnName="kategoriID" />
+          <ScalarProperty Name="UstKategoriID" ColumnName="UstKategoriID" />
+          <ScalarProperty Name="kategoriBaslik" ColumnName="kategoriBaslik" />
+          <ScalarProperty Name="kategoriAciklama" ColumnName="kategoriAciklama" />
+          <ScalarProperty Name="kategoriResimUrl" ColumnName="kategoriResimUrl" />
+          <ScalarProperty Name="kategoriOlTarih" ColumnName="kategoriOlTarih" />
+          <ScalarProperty Name="kategoriGunTarih" ColumnName="kategoriGunTarih" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

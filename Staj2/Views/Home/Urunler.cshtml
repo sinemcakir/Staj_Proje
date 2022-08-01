@@ -1,0 +1,47 @@
+﻿@using Staj2.Controllers
+@using EntityFrameworkLibrary
+@model PageItem
+@{
+    ViewBag.Title = "Urunler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Urunler</h2>
+
+
+
+<br />
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-sm btn-success pull-right" data-mode="UrunGuncelle" data-data1="">+&nbsp;Yeni</a>
+    </div>
+    <div class="col-md-12">
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Ürün Kod</th>
+                    <th>Ürün Başlık</th>
+                    <th>Ürün Açıklama</th>
+                    <th>Güncelle</th>
+                    <th>Sil</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.lstUrunlerIslem)
+                {
+                    <tr>
+                        <td>@item.urunKodu</td>
+                        <td>@item.urunBaslik</td>
+                        <td>@item.urunAciklama</td>
+                        <td><a class="btn btn-sm btn-info" data-mode="UrunGuncelle" data-data1="@item.urunID">Güncelle</a></td>
+                        <td><a class="btn btn-sm btn-danger" data-mode="UrunSil" data-data1="@item.urunID">Sil</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

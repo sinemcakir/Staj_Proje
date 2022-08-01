@@ -1,0 +1,54 @@
+﻿@using Staj2.Controllers
+@model PageItem
+<div id="mdlForm" class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        @if (Model.lstKategorilerIslem.FirstOrDefault().kategoriID > 0)
+        {
+            <h4 class="blue bigger">Ürün düzenle</h4>
+        }
+        else
+        {
+            <h4 class="blue bigger">Ürün ekle</h4>
+        }
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <label class="control-label">Kategori</label>
+                <select class="form-control" name="selectKategoriler">
+                    <option value="0">Seçiniz...</option>
+                    @foreach (var item in Model.lstSelectList)
+                    {
+                        <option value="@item.Value" @(item.Value == Model.lstKategorilerIslem.FirstOrDefault().UstKategoriID.ToString() ? "selected=selected" : "")>@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <label class="control-label">Kategori Resim </label>
+                <img src="@Model.lstKategorilerIslem.FirstOrDefault().kategoriResimUrl" style="max-width:150px !important;" />
+                <input type="hidden" name="hdnKategoriResim" value="@Model.lstKategorilerIslem.FirstOrDefault().kategoriResimUrl" />
+                <input type="file" class="form-control" name="fileKategoriResim" />
+            </div>
+            @*<div class="col-md-6 col-sm-12">
+                    <label class="control-label">Kategori Kodu </label>
+                    <input type="text" class="form-control" name="txtKategoriKodu" value="@Model.lstKategorilerIslem.FirstOrDefault().urunKodu" data-required='true' data-group_name='ModalForm' data-message_type='formmessage' />
+                </div>*@
+            <div class="col-md-6 col-sm-12">
+                <label class="control-label">Kategori Başlık </label>
+                <input type="text" class="form-control" name="txtKategoriBaslik" value="@Model.lstKategorilerIslem.FirstOrDefault().kategoriBaslik" data-required='true' data-group_name='ModalForm' data-message_type='formmessage' />
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <label class="control-label">Açıklama </label>
+                <textarea class="form-control" rows="7" name="txtKategoriAciklama" data-required='true' data-group_name='ModalForm' data-message_type='formmessage'>@Model.lstKategorilerIslem.FirstOrDefault().kategoriAciklama</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-sm" data-dismiss="modal">
+            <i class="ace-icon fa fa-times"></i>
+            Kapat
+        </button>
+        <a class="btn btn-success" data-mode="KategoriIslem" data-data1="@Model.lstKategorilerIslem.FirstOrDefault().kategoriID" data-required='true' data-moving_scroll_bar='1' data-group_name='ModalForm'>Kaydet</a>
+    </div>
+</div>

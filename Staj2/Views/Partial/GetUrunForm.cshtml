@@ -1,0 +1,60 @@
+﻿@using Staj2.Controllers
+@model PageItem
+<div id="mdlForm" class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        @if (Model.lstUrunlerIslem.FirstOrDefault().urunID > 0)
+        {
+            <h4 class="blue bigger">Ürün düzenle</h4>
+        }
+        else
+        {
+            <h4 class="blue bigger">Ürün ekle</h4>
+        }
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <label class="control-label">Kategori</label>
+                <select class="form-control" type='select' name="selectKategoriler" data-required='true' data-group_name='ModalForm' data-message_type='formmessage'>
+                    @foreach (var item in Model.lstKategorilerIslem)
+                    {
+                        if (item.kategoriID == Model.lstUrunlerIslem.FirstOrDefault().kategoriID)
+                        {
+                            <option value="@item.kategoriID" selected="selected">@item.kategoriBaslik</option>
+                        }
+                        else
+                        {
+                            <option value="@item.kategoriID">@item.kategoriBaslik</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <label class="control-label">Ürün Resim </label>
+                <img src="@Model.lstUrunlerIslem.FirstOrDefault().urunResimUrl" style="max-width:150px !important;" />
+                <input type="hidden" name="hdnUrunResim" value="@Model.lstUrunlerIslem.FirstOrDefault().urunResimUrl" />
+                <input type="file" class="form-control" name="fileUrunResim" />
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <label class="control-label">Ürün Kodu </label>
+                <input type="text" class="form-control" name="txtUrunKodu" value="@Model.lstUrunlerIslem.FirstOrDefault().urunKodu" data-required='true' data-group_name='ModalForm' data-message_type='formmessage' />
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <label class="control-label">Ürün Başlık </label>
+                <input type="text" class="form-control" name="txtUrunBaslik" value="@Model.lstUrunlerIslem.FirstOrDefault().urunBaslik" data-required='true' data-group_name='ModalForm' data-message_type='formmessage' />
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <label class="control-label">Ürün Açıklama </label>
+                <textarea class="form-control" rows="7" name="txtUrunAciklama" value="@Model.lstUrunlerIslem.FirstOrDefault().urunAciklama" data-required='true' data-group_name='ModalForm' data-message_type='formmessage'></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-sm" data-dismiss="modal">
+            <i class="ace-icon fa fa-times"></i>
+            Kapat
+        </button>
+        <a class="btn btn-success" data-mode="UrunIslem" data-data1="@Model.lstUrunlerIslem.FirstOrDefault().urunID" data-required='true' data-moving_scroll_bar='1' data-group_name='ModalForm'>Kaydet</a>
+    </div>
+</div>

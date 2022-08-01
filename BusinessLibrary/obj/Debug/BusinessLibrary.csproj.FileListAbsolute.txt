@@ -1,0 +1,9 @@
+C:\Users\LENOVO\source\repos\Staj2\BusinessLibrary\bin\Debug\BusinessLibrary.dll
+C:\Users\LENOVO\source\repos\Staj2\BusinessLibrary\bin\Debug\BusinessLibrary.pdb
+C:\Users\LENOVO\source\repos\Staj2\BusinessLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\LENOVO\source\repos\Staj2\BusinessLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\LENOVO\source\repos\Staj2\BusinessLibrary\obj\Debug\BusinessLibrary.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\Staj2\BusinessLibrary\obj\Debug\BusinessLibrary.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\Staj2\BusinessLibrary\obj\Debug\BusinessLibrary.csproj.CopyComplete
+C:\Users\LENOVO\source\repos\Staj2\BusinessLibrary\obj\Debug\BusinessLibrary.dll
+C:\Users\LENOVO\source\repos\Staj2\BusinessLibrary\obj\Debug\BusinessLibrary.pdb
